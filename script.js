@@ -54,9 +54,18 @@ function switchSlider(n){
     main.className += ' main-i_active';
     ctrl.className += ' ctrl-i_active';
 }
-
+//6.动态调整图片的margin-top以使其垂直居中
+function movePictures(){
+    var pictures = g('.picture');
+    for(i=0;i<pictures.length;i++){
+        pictures[i].style.marginTop = (-1*pictures[i].clientHeight/2) + 'px';
+    }
+}
 //4.定义何时处理幻灯片输出
 window.onload = function(){
     addSliders();
     switchSlider(1);
+    setTimeout(function(){
+        movePictures();
+    },100);
 };
