@@ -123,6 +123,11 @@ body{
     right:50%;
     top:0;
     -webkit-transition:all .5s;
+    z-index:2;
+}
+
+.slider .main .main-i_right{
+    right:-50%;
 }
 
 .slider .main .main-i h2{
@@ -139,9 +144,14 @@ body{
     -webkit-transition:all 1s .8s;
 }
 
+#main_background,
 .slider .main .main-i_active{
     right:0;
     opacity:1;
+}
+
+#main_background{
+    z-index:1;
 }
 
 .slider .main .main-i_active h2,
